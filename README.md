@@ -13,6 +13,7 @@ https://user-images.githubusercontent.com/48329669/128570069-64627288-c9fa-4313-
    2. Husk at importere React
    3. Husk at importere Text fra react-native
 
+
 ## App.js
 1. Opret først et View som wrapper applikationen i return
 2. Tilføj i View'ets attributter en styling med container `` style={styles.container} ``
@@ -31,7 +32,7 @@ https://user-images.githubusercontent.com/48329669/128570069-64627288-c9fa-4313-
 3. Style nu ligeledes det nuværende `<Tekst> </Text>` element så det ligner en overskrift ( se evt referencer om styling)
 4. Opret under Tekst elementet et `<ScrollView></ScrollView>` element ( læs mere på https://reactnative.dev/docs/scrollview )
 5. Definer i ScrollViewet at den maks må mere 80 i højden med `` style={{height:80}}``
-6. Tilføj nu følgende kodestykke: ![image](Screenshot 2021-08-07 at 07.26.49.png)
+6. Tilføj nu følgende kodestykke: <img width="560" alt="Screenshot 2021-08-07 at 07 26 49" src="https://user-images.githubusercontent.com/48329669/133664027-a97b9de6-1e44-401d-8fc0-400c515cf4cc.png">
    1. Det vi gør her er at loope igennem vores lande med en map funktion, som looper igennem arrays. Heri laver vi en funktion som først har værdien og dernæst index nummeret. Der bruger vi keyen til at definere pladsen på elementet og country til udprint af vores værdi
 7. Tjek nu om der er en række lande udprintet på din telefon
 
@@ -74,7 +75,7 @@ https://user-images.githubusercontent.com/48329669/128570069-64627288-c9fa-4313-
    7. Se eventuelt textinput i referencer
 6. Opret under TextInputtet et `<ScrollView> </ScrollView>` med følgende attributter: ` bounces={true} style={{height:350,width:"60%"}} `
    1. Herunder lav en map funktion som looper igennem users. se Screenshot
-   2. ![image](Screenshot 2021-08-07 at 09.19.03.png)
+   2. ![image](Screenshot 2021-08-07 at 09.19.03.png)<img width="755" alt="Screenshot 2021-08-07 at 09 19 03" src="https://user-images.githubusercontent.com/48329669/133664100-78192a09-ef65-469d-80d7-b1e528eed57b.png">
 7. Under ScrollViewet tilføj følgende: <Text>{msg ? msg :""}</Text>
 8. Tjek nu på din telefon om du kan skrive et antal og at viste brugere vil skifte
    1. Hvis du oplever problemer så HUSK console.log igennem dine objekter eller states + læs hvad react native brokker sig over.
