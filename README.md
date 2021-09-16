@@ -31,7 +31,7 @@ https://user-images.githubusercontent.com/48329669/128570069-64627288-c9fa-4313-
 3. Style nu ligeledes det nuværende `<Tekst> </Text>` element så det ligner en overskrift ( se evt referencer om styling)
 4. Opret under Tekst elementet et `<ScrollView></ScrollView>` element ( læs mere på https://reactnative.dev/docs/scrollview )
 5. Definer i ScrollViewet at den maks må mere 80 i højden med `` style={{height:80}}``
-6. Tilføj nu følgende kodestykke: ![](Screenshot 2021-08-07 at 07.26.49.png)
+6. Tilføj nu følgende kodestykke: ![image](Screenshot 2021-08-07 at 07.26.49.png)
    1. Det vi gør her er at loope igennem vores lande med en map funktion, som looper igennem arrays. Heri laver vi en funktion som først har værdien og dernæst index nummeret. Der bruger vi keyen til at definere pladsen på elementet og country til udprint af vores værdi
 7. Tjek nu om der er en række lande udprintet på din telefon
 
