@@ -23,7 +23,7 @@ https://user-images.githubusercontent.com/48329669/128570069-64627288-c9fa-4313-
 ## const.js
 1. opret en såkaldt const.js i mappens rod, som skal bruges til indeholde alt vores "hardcoded data", som i dette tilfælde kommer til at være vores lande, biler og vores fetch url
 2. opret nu hhv en const for CARS, COUNTRIES og GET_USERS_URL med dataen nede fra skabelon 3. Husk for at vi kan "bruge" vores data, så skal const'en blive eksporteret. Så hvis der skulle eksporteres en liste af OL-lege skal man skrive ``export const OL_LEGE = ['volleyball','basketball','spydkast']  ``
-3. For at teste dine lister og url kan du eventuel console.log() dem i App.js, for at se om const'ene kan kaldes på ( husk at importere const'ene i toppen af App.js)
+3. For at teste dine lister og url kan du eventuel console.log() dem i App.js, for at se om const'ene kan kaldes på ( husk at importere const og funktionerne i toppen af App.js)
 
 ## ArrayListComponent.js
 1. I return funktionen opret et `<View> </View>` som wrapper så der agerer som "forældren" til komponenterne herunder. For der kan kun være en "forældre" i return funktionen
