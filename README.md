@@ -8,18 +8,18 @@ https://user-images.githubusercontent.com/48329669/128570069-64627288-c9fa-4313-
 
 ## components
 1. Opret en ny mappe kaldt ``components `` som skal indeholde 3 filer kaldt ArrayListComponent.js, FetchListComponent.js og FlatListComponent.js.
-2. I hver af filerne brug skabelonen fra hints
+2. I hver af filerne bruges skabelonen fra hints
    1. Husk også at KomponentNavn skal være ens med filnavnet
    2. Husk at importere React
    3. Husk at importere Text fra react-native
 
 
 ## App.js
-1. Opret først et View som wrapper applikationen i return
+1. Opret først et View som wrapper applikation i return
 2. Tilføj i View'ets attributter en styling med container `` style={styles.container} ``
-3. Opret et nyt stylesheet kaldt med skabelon 2, og eventuelt ændre baggrundsfarven
-4. import nu de tre nyoprettet komponenter med hver deres komponentnavn som fx ``<ArrayListComponent/>``
-5. Nu burde du have 3 tekster fra hver af de nyoprettet komponenter
+3. Opret et nyt stylesheet, se skabelon 2, og eventuelt ændre baggrundsfarven
+4. importér nu de tre nyoprettet komponenter med hver deres komponentnavn som fx ``<ArrayListComponent/>``
+5. Nu burde du have 3 tekster fra hver af de nyoprettede komponenter
 
 ## const.js
 1. opret en såkaldt const.js i mappens rod, som skal bruges til indeholde alt vores "hardcoded data", som i dette tilfælde kommer til at være vores lande, biler og vores fetch url
@@ -27,17 +27,17 @@ https://user-images.githubusercontent.com/48329669/128570069-64627288-c9fa-4313-
 3. For at teste dine lister og url kan du eventuel console.log() dem i App.js, for at se om const'ene kan kaldes på ( husk at importere const og funktionerne i toppen af App.js)
 
 ## ArrayListComponent.js
-1. I return funktionen opret et `<View> </View>` som wrapper så der agerer som "forældren" til komponenterne herunder. For der kan kun være en "forældre" i return funktionen
+1. I return funktionen opret et `<View> </View>` som wrapper og derved fungerer som "parent" til komponenterne herunder. For der kan kun være en "parent " i return funktionen
 2. Tilføj nu en styling til ``View`` elementet ligesom fra App.js, men her vil vi gerne have der bliver tilføjet alignItems: 'center', justifyContent: 'center' i containeren
 3. Style nu ligeledes det nuværende `<Tekst> </Text>` element så det ligner en overskrift ( se evt referencer om styling)
 4. Opret under Tekst elementet et `<ScrollView></ScrollView>` element ( læs mere på https://reactnative.dev/docs/scrollview )
 5. Definer i ScrollViewet at den maks må mere 80 i højden med `` style={{height:80}}``
 6. Tilføj nu følgende kodestykke: <img width="560" alt="Screenshot 2021-08-07 at 07 26 49" src="https://user-images.githubusercontent.com/48329669/133664027-a97b9de6-1e44-401d-8fc0-400c515cf4cc.png">
-   1. Det vi gør her er at loope igennem vores lande med en map funktion, som looper igennem arrays. Heri laver vi en funktion som først har værdien og dernæst index nummeret. Der bruger vi keyen til at definere pladsen på elementet og country til udprint af vores værdi
+   1. Det vi gør her er at loope igennem vores lande med en map funktion, som looper igennem arrays. Heri laver vi en funktion som først har værdien og dernæst index nummeret. Der bruger vi key'en til at definere pladsen på elementet og country til udprint af vores værdi
 7. Tjek nu om der er en række lande udprintet på din telefon
 
 ## FlatListComponent.js 
-1. I return funktionen opret et `<View> </View>` som wrapper så der agerer som "forældren" til komponenterne herunder. For der kan kun være en "forældre" i return funktionen
+1. I return funktionen oprettes et `<View> </View>` som wrapper der fungerer som "parent" til komponenterne herunder. For der kan kun være en "parent" i return funktionen
 2. Tilføj nu en styling til ``View`` elementet ligesom fra App.js, men her vil vi gerne have der bliver tilføjet alignItems: 'center', justifyContent: 'center' i containeren
 3. Style nu ligeledes det nuværende `<Text> </Text>` element så det ligner en overskrift ( se evt referencer om styling)
 4. Tilføj nu en `<FlatList />` med attributterne style, data, renderItem og keyExtractor.
@@ -46,35 +46,35 @@ https://user-images.githubusercontent.com/48329669/128570069-64627288-c9fa-4313-
    3. I renderItem skal vi have en funktion med props for Item som returnere en CarItem med attributterne item, som har en item og en attribut msg med selvvalgt tekst ( se hint 4)
    4. Skriv følgende i `keyExtractoren={item => item}`
 5. Opret nu en funktion kaldt CarItem som har i parametrene () ``{item,msg}``
-   1. I funktionen lav en et return, som returnere et ``<Text> </Text>`` som har hhv ``{msg}`` og `` {item} `` i sig
+   1. I funktionen laves en et return, som returnere et ``<Text> </Text>`` som har hhv ``{msg}`` og `` {item} `` i sig
 6. Se nu i App.js om du har en liste af biler 
    1. Hvis du oplever problemer så husk at bruge console.log()
 
 ## FetchListComponent.js - useState og useEffect
-1. opret nu 3 states kaldt users, msg og amount. Disse states skal håndtere de data vi henter fra vores endpoint i vores const.js
+1. opret nu 3 states, der kaldes; users, msg og amount. Disse states skal håndtere de data vi henter fra vores endpoint i vores const.js
    1. Tip: ``const [navn,setNavn] = useState({});``
-   2. Husk at sætte en initial state på hver af statesene
+   2. Husk at sætte en initial state på hver af state-variablerne
 2. Opret nu en useEffect, som kalder en funktion ved navn loadUsers(), og lav en dependency af amount
    1. Hint 5
 3. Lav en async funktion kaldt loadUsers 
    1. `` const loadUsers = async () => {}``
-   2. Deri lav en `try{} catch(error){}`hvor du først laver en fetch med GET_USERS_URL fra const.js. Dette fetch sættes ligmed en const response. 
-   3. derunder lav en const json = await response.json();
+   2. Deri laves en `try{} catch(error){}`hvor du først laver en fetch med GET_USERS_URL fra const.js. Dette fetch sættes ligmed en const response. 
+   3. Derunder laves en const json = await response.json();
    4. Til sidst setUsers(json.result)
       1. Se evt hint 6
-   5. Derefter lav en setMsg med error i catch'en
-4. Gå nu ned i return funktionen og "wrap" tekst elementen med en if else shorthand, hvor i if'et skal der stå users.length > 0
+   5. Derefter laves en setMsg med error i catch'en
+4. Gå nu ned i return funktionen og "wrap" tekst elementet med en if else shorthand, hvor i if'et skal der stå users.length > 0
    1. Se evt hint 7
-5. I if statementet lav samme struktur med View og overskrift tekst som de andre komponenter
-   1. Under `<Text> </Text>` elementet opret et `<TextInput/>` element som har tilhørende attributter: style, onChangeText, value, placeholder og keyboardType
+5. I if statementet laves samme struktur med View og overskrift-tekst som de andre komponenter
+   1. Under `<Text> </Text>` elementet oprettes et `<TextInput/>` element som har tilhørende attributter: style, onChangeText, value, placeholder og keyboardType
    2. Stylen på feltet kan være `` {borderWidth:1,borderColor:"black",width:"70%",padding:4} ``
    3. onChangeText skal sættes med setAmount
    4. value skal være amount.toString()
-   5. placeholder kan du selv bestemme, men skal være en string
+   5. placeholder kan du selv bestemme, men det skal være en string
    6. keyboardType skal være numeric
    7. Se eventuelt textinput i referencer
 6. Opret under TextInputtet et `<ScrollView> </ScrollView>` med følgende attributter: ` bounces={true} style={{height:350,width:"60%"}} `
-   1. Herunder lav en map funktion som looper igennem users. se Screenshot
+   1. Herunder laves en map-funktion som looper igennem users. se Screenshot
    2. ![image](Screenshot 2021-08-07 at 09.19.03.png)<img width="755" alt="Screenshot 2021-08-07 at 09 19 03" src="https://user-images.githubusercontent.com/48329669/133664100-78192a09-ef65-469d-80d7-b1e528eed57b.png">
 7. Under ScrollViewet tilføj følgende: <Text>{msg ? msg :""}</Text>
 8. Tjek nu på din telefon om du kan skrive et antal og at viste brugere vil skifte
