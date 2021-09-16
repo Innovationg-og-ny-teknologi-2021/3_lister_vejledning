@@ -74,7 +74,7 @@ https://user-images.githubusercontent.com/48329669/128570069-64627288-c9fa-4313-
    7. Se eventuelt textinput i referencer
 6. Opret under TextInputtet et `<ScrollView> </ScrollView>` med følgende attributter: ` bounces={true} style={{height:350,width:"60%"}} `
    1. Herunder lav en map funktion som looper igennem users. se Screenshot
-   2. ![](Screenshot 2021-08-07 at 09.19.03.png)
+   2. ![image](Screenshot 2021-08-07 at 09.19.03.png)
 7. Under ScrollViewet tilføj følgende: <Text>{msg ? msg :""}</Text>
 8. Tjek nu på din telefon om du kan skrive et antal og at viste brugere vil skifte
    1. Hvis du oplever problemer så HUSK console.log igennem dine objekter eller states + læs hvad react native brokker sig over.
