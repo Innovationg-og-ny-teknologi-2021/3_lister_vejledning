@@ -43,10 +43,10 @@ https://user-images.githubusercontent.com/48329669/128570069-64627288-c9fa-4313-
 4. Tilføj nu en `<FlatList />` med attributterne style, data, renderItem og keyExtractor.
    1. I style skal der være et objekt med height:80
    2. I data, skal vi have vores CARS fra const.js
-   3. I renderItem skal vi have en funktion med props for Item som returnere en CarItem med attributterne item, som har en item og en attribut msg med selvvalgt tekst ( se hint 4)
+   3. I renderItem skal vi have en funktion med props for Item som returnere en CarItem med attributterne item, som modtager et item argument ( se hint 4)
    4. Skriv følgende i `keyExtractoren={item => item}`
 5. Opret nu en funktion kaldt CarItem som har i parametrene () ``{item,msg}``
-   1. I funktionen laves en et return, som returnere et ``<Text> </Text>`` som har hhv ``{msg}`` og `` {item} `` i sig
+   1. I funktionen laves en et return, som returnere et ``<Text> </Text>`` som har {item} `` i sig
 6. Se nu i App.js om du har en liste af biler 
    1. Hvis du oplever problemer så husk at bruge console.log()
 
