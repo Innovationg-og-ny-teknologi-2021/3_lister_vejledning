@@ -18,12 +18,14 @@ https://user-images.githubusercontent.com/48329669/128570069-64627288-c9fa-4313-
 1. Opret først et View som wrapper applikation i return
 2. Tilføj i View'ets attributter en styling med container `` style={styles.container} ``
 3. Opret et nyt stylesheet, se skabelon 2, og eventuelt ændre baggrundsfarven
-4. importér nu de tre nyoprettet komponenter med hver deres komponentnavn som fx ``<ArrayListComponent/>``
+4. Importér nu de tre nyoprettet komponenter med hver deres komponentnavn som fx ``<ArrayListComponent/>``
 5. Nu burde du have 3 tekster fra hver af de nyoprettede komponenter
 
+**OBS**! - Ved standard expo opstilling vil der være `` alignItems: 'center'`` & `` justifyContent 'center'`` i jeres stylesheet container. Disse attributter kan drille jeres lister. Prøv at udkommentere dem hvis ikke i kan se jeres 3 tekster fra jeres komponenter.  
+
 ## const.js
-1. opret en såkaldt const.js i mappens rod, som skal bruges til indeholde alt vores "hardcoded data", som i dette tilfælde kommer til at være vores lande, biler og vores fetch url
-2. opret nu hhv en const for CARS, COUNTRIES og GET_USERS_URL med dataen nede fra skabelon 3. Husk for at vi kan "bruge" vores data, så skal const'en blive eksporteret. Så hvis der skulle eksporteres en liste af OL-lege skal man skrive ``export const OL_LEGE = ['volleyball','basketball','spydkast']  ``
+1. Opret en såkaldt const.js i mappens rod, som skal bruges til indeholde alt vores "hardcoded data", som i dette tilfælde kommer til at være vores lande, biler og vores fetch url
+2. Opret nu hhv en const for CARS, COUNTRIES og GET_USERS_URL med dataen nede fra skabelon 3. Husk for at vi kan "bruge" vores data, så skal const'en blive eksporteret. Så hvis der skulle eksporteres en liste af OL-lege skal man skrive ``export const OL_LEGE = ['volleyball','basketball','spydkast']  ``
 3. For at teste dine lister og url kan du eventuel console.log() dem i App.js, for at se om const'ene kan kaldes på ( husk at importere const og funktionerne i toppen af App.js)
 
 ## ArrayListComponent.js
