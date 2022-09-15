@@ -43,7 +43,7 @@ https://user-images.githubusercontent.com/48329669/128570069-64627288-c9fa-4313-
    1. I style skal der være et objekt med height:80
    2. I data, skal vi have vores CARS fra const.js
    3. I renderItem skal vi have en funktion med props for Item som returnere en CarItem med attributterne item, som modtager et item argument ( se hint 4)
-   4. Skriv følgende i `keyExtractoren={item => item}`
+   4. Skriv følgende i `keyExtractor={item => item}`
 5. Opret nu en funktion kaldt CarItem som har i parametrene () ``{item,msg}``
    1. I funktionen laves en et return, som returnere et ``<Text> </Text>`` som har {item} `` i sig
 6. Se nu i App.js om du har en liste af biler 
