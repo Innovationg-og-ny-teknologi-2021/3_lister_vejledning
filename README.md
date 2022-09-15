@@ -16,11 +16,9 @@ https://user-images.githubusercontent.com/48329669/128570069-64627288-c9fa-4313-
 
 
 ## App.js
-1. Opret først et View som wrapper applikation i return
-2. Tilføj i View'ets attributter en styling med container `` style={styles.container} ``
-3. Opret et nyt stylesheet, se skabelon 2, og eventuelt ændre baggrundsfarven
-4. importér nu de tre nyoprettet komponenter med hver deres komponentnavn som fx ``<ArrayListComponent/>``
-5. Nu burde du have 3 tekster fra hver af de nyoprettede komponenter
+1. Opret et nyt stylesheet, se skabelon 2, og eventuelt ændre baggrundsfarven
+2. importér nu de tre nyoprettet komponenter med hver deres komponentnavn som fx ``<ArrayListComponent/>``
+3. Nu burde du have 3 tekster fra hver af de nyoprettede komponenter
 
 ## const.js
 1. opret en såkaldt const.js i mappens rod, som skal bruges til indeholde alt vores "hardcoded data", som i dette tilfælde kommer til at være vores lande, biler og vores fetch url
