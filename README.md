@@ -9,7 +9,7 @@ https://user-images.githubusercontent.com/48329669/128570069-64627288-c9fa-4313-
 
 ## components
 1. Opret en ny mappe kaldt ``components `` som skal indeholde 3 filer kaldt ArrayListComponent.js, FetchListComponent.js og FlatListComponent.js.
-2. I hver af filerne bruges skabelonen fra hints
+2. I hver af filerne bruges skabelonen fra skabelon 1 og 2
    1. Husk også at KomponentNavn skal være ens med filnavnet
    2. Husk at importere React
    3. Husk at importere Text fra react-native
