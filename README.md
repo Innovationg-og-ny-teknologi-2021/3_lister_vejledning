@@ -4,7 +4,8 @@
 https://user-images.githubusercontent.com/48329669/128570069-64627288-c9fa-4313-aa17-d727d279563e.mp4
 
 ## App.js
-1. Opret et nyt expo projekt med `` expo init <projektNavn>`` i din mappe med opgaver
+1. Start med at oprette et nyt projekt.
+    - `expo init <--angiv navnet på øvelsen-->` eller `npx create-expo-app <--angiv navnet på øvelsen-->` (den nye måde)
 
 ## components
 1. Opret en ny mappe kaldt ``components `` som skal indeholde 3 filer kaldt ArrayListComponent.js, FetchListComponent.js og FlatListComponent.js.
