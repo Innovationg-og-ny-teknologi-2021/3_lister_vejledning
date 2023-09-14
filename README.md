@@ -3,15 +3,24 @@
 ## Slutresultat
 https://user-images.githubusercontent.com/48329669/128570069-64627288-c9fa-4313-aa17-d727d279563e.mp4
 
+## Introduktion
+I dag skal vi arbejde med lister. Lister er især gode til at præsentere jeres data på screens.
+F.eks. den mest brugte liste er FlatList, som er en liste der kan scrolles op og ned i.
+Det den type liste som bl.a. bruges i Facebook, Instagram, Twitter og mange andre apps når
+i sidder og doom-scroller til undervisningen.
+
+Start med at læse dokumentationen på de relevante komponenter, som i skal bruge i dag.
+I finder dem i bunden af denne guide. 
+
 ## App.js
-1. Opret et nyt expo projekt med `` expo init <projektNavn>`` i din mappe med opgaver
+1. Opret et nyt expo projekt med `` npx create-expo-app <projektNavn>`` i din mappe med opgaver
 
 ## components
 1. Opret en ny mappe kaldt ``components `` som skal indeholde 3 filer kaldt ArrayListComponent.js, FetchListComponent.js og FlatListComponent.js.
 2. I hver af filerne bruges skabelonen fra hints
    1. Husk også at KomponentNavn skal være ens med filnavnet
    2. Husk at importere React
-   3. Husk at importere Text fra react-native
+   3. Husk at importere Text og hvad i skal bruge fra react-native
 
 
 ## App.js
@@ -21,6 +30,19 @@ https://user-images.githubusercontent.com/48329669/128570069-64627288-c9fa-4313-
 4. Importér nu de tre nyoprettet komponenter med hver deres komponentnavn som fx ``<ArrayListComponent/>``
 5. Nu burde du have 3 tekster fra hver af de nyoprettede komponenter
 
+### Hint:
+``` 
+export default function App() {
+  return (
+      <View style={styles.container}>
+        <StatusBar style="auto" />
+        // TODO: Tilføj komponenter her
+      </View>
+  );
+}
+```
+
+
 **OBS**! - Ved standard expo opstilling vil der være `` alignItems: 'center'`` & `` justifyContent 'center'`` i jeres stylesheet container. Disse attributter kan drille jeres lister. Prøv at udkommentere dem hvis ikke i kan se jeres 3 tekster fra jeres komponenter.  
 
 ## const.js
@@ -28,9 +50,20 @@ https://user-images.githubusercontent.com/48329669/128570069-64627288-c9fa-4313-
 2. Opret nu hhv en const for CARS, COUNTRIES og GET_USERS_URL med dataen nede fra skabelon 3. Husk for at vi kan "bruge" vores data, så skal const'en blive eksporteret. Så hvis der skulle eksporteres en liste af OL-lege skal man skrive ``export const OL_LEGE = ['volleyball','basketball','spydkast']  ``
 3. For at teste dine lister og url kan du eventuel console.log() dem i App.js, for at se om const'ene kan kaldes på ( husk at importere const og funktionerne i toppen af App.js)
 
+### skabelon 3
+
+``` 
+["Audi","BMW","Tesla","Alfa oreo","Ford","Kia","Rover", "Saab", "Seat", "Skoda", "Smart", "SsangYong", "Subaru", "Suzuki"]
+
+["Denmark","England","Spanien","Italien"];
+
+'https://randomuser.me/api?results=';
+
+```
+
 ## ArrayListComponent.js
 1. I return funktionen opret et `<View> </View>` som wrapper og derved fungerer som "parent" til komponenterne herunder. For der kan kun være en "parent " i return funktionen
-2. Tilføj nu en styling til ``View`` elementet ligesom fra App.js, men her vil vi gerne have der bliver tilføjet alignItems: 'center', justifyContent: 'center' i containeren
+2. Tilføj nu en styling til ``View`` elementet ligesom fra App.js, men her vil vi gerne have der bliver tilføjet ``alignItems: 'center', justifyContent: 'center'`` i containeren
 3. Style nu ligeledes det nuværende `<Tekst> </Text>` element så det ligner en overskrift ( se evt referencer om styling)
 4. Opret under Tekst elementet et `<ScrollView></ScrollView>` element ( læs mere på https://reactnative.dev/docs/scrollview )
 5. Definer i ScrollViewet at den maks må mere 80 i højden med `` style={{height:80}}``
@@ -47,14 +80,54 @@ https://user-images.githubusercontent.com/48329669/128570069-64627288-c9fa-4313-
    2. I data, skal vi have vores CARS fra const.js
    3. I renderItem skal vi have en funktion med props for Item som returnere en CarItem med attributterne item, som modtager et item argument ( se hint 4)
    4. Skriv følgende i `keyExtractoren={item => item}`
+### Hint
+```
+return(
+        <View style={styles.container}>
+            {/* Title med styling*/ }
+            <Text style={{ fontSize: 20, textAlign:'center',paddingTop:40 }}>
+                1 Mine biler - Flatlist
+            </Text>
+            {/* FlatList komponent med title propertien og en værdi*/ }
+            <FlatList
+                style={{height:--}}
+                data={"Jeres data"}
+                renderItem={({item})=>{
+                    {/*Render CarItem, her er det vigtigt at kalde et subkomponent*/}
+                    return(
+                        <CarItem
+                            item={item}
+                            msg={"Oh boy i love"}
+                        />
+                    )
+                }}
+                keyExtractor={item => item}
+            />
+
+        </View>
+    )
+
+```
 5. Opret nu en funktion kaldt CarItem som har i parametrene () ``{item,msg}``
    1. I funktionen laves en et return, som returnere et ``<Text> </Text>`` som har {item} `` i sig
+
+### Hint
+```
+    const CarItem = ({item,msg}) => {
+        return(
+            <Text>
+                {msg} "{item}"
+            </Text>
+        )
+    }
+```
+
 6. Se nu i App.js om du har en liste af biler 
    1. Hvis du oplever problemer så husk at bruge console.log()
 
 ## FetchListComponent.js - useState og useEffect
 1. opret nu 3 states, der kaldes; users, msg og amount. Disse states skal håndtere de data vi henter fra vores endpoint i vores const.js
-   1. Tip: ``const [navn,setNavn] = useState({});``
+   1. Tip: ``const [users,setUsers] = useState({});``
    2. Husk at sætte en initial state på hver af state-variablerne
 2. Opret nu en useEffect, som kalder en funktion ved navn loadUsers(), og lav en dependency af amount
    1. Hint 5
@@ -63,8 +136,21 @@ https://user-images.githubusercontent.com/48329669/128570069-64627288-c9fa-4313-
    2. Deri laves en `try{} catch(error){}`hvor du først laver en fetch med GET_USERS_URL fra const.js. Dette fetch sættes ligmed en const response. 
    3. Derunder laves en const json = await response.json();
    4. Til sidst setUsers(json.result)
-      1. Se evt hint 6
    5. Derefter laves en setMsg med error i catch'en
+
+### Hint
+```
+    const loadUsers = async () => {
+        try {
+            const response = await fetch(***);
+            const json = await response.json();
+            setUsers(***);
+        } catch (error) {
+            setMsg(***)
+        }
+    }
+```
+
 4. Gå nu ned i return funktionen og "wrap" tekst elementet med en if else shorthand, hvor i if'et skal der stå users.length > 0
    1. Se evt hint 7
 5. I if statementet laves samme struktur med View og overskrift-tekst som de andre komponenter
@@ -118,6 +204,8 @@ const styles = StyleSheet.create({
 'https://randomuser.me/api?results=';
 
 ```
+
+
 
 ### hint 4
 ```
