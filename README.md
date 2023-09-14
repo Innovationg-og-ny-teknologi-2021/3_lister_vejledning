@@ -13,22 +13,33 @@ Start med at læse dokumentationen på de relevante komponenter, som i skal brug
 I finder dem i bunden af denne guide. 
 
 ## App.js
+<<<<<<< HEAD
 1. Opret et nyt expo projekt med `` npx create-expo-app <projektNavn>`` i din mappe med opgaver
+=======
+1. Start med at oprette et nyt projekt.
+    - `expo init <--angiv navnet på øvelsen-->` eller `npx create-expo-app <--angiv navnet på øvelsen-->` (den nye måde)
+>>>>>>> 2a51138660e67129ad8749893a5b10cbbd1ef63a
 
 ## components
 1. Opret en ny mappe kaldt ``components `` som skal indeholde 3 filer kaldt ArrayListComponent.js, FetchListComponent.js og FlatListComponent.js.
-2. I hver af filerne bruges skabelonen fra hints
+2. I hver af filerne bruges skabelonen fra skabelon 1 og 2
    1. Husk også at KomponentNavn skal være ens med filnavnet
    2. Husk at importere React
    3. Husk at importere Text og hvad i skal bruge fra react-native
 
 
 ## App.js
+<<<<<<< HEAD
 1. Opret først et View som wrapper applikation i return
 2. Tilføj i View'ets attributter en styling med container `` style={styles.container} ``
 3. Opret et nyt stylesheet, se skabelon 2, og eventuelt ændre baggrundsfarven
 4. Importér nu de tre nyoprettet komponenter med hver deres komponentnavn som fx ``<ArrayListComponent/>``
 5. Nu burde du have 3 tekster fra hver af de nyoprettede komponenter
+=======
+1. Opret et nyt stylesheet, se skabelon 2, og eventuelt ændre baggrundsfarven
+2. importér nu de tre nyoprettet komponenter med hver deres komponentnavn som fx ``<ArrayListComponent/>``
+3. Nu burde du have 3 tekster fra hver af de nyoprettede komponenter
+>>>>>>> 2a51138660e67129ad8749893a5b10cbbd1ef63a
 
 ### Hint:
 ``` 
@@ -79,6 +90,7 @@ export default function App() {
    1. I style skal der være et objekt med height:80
    2. I data, skal vi have vores CARS fra const.js
    3. I renderItem skal vi have en funktion med props for Item som returnere en CarItem med attributterne item, som modtager et item argument ( se hint 4)
+<<<<<<< HEAD
    4. Skriv følgende i `keyExtractoren={item => item}`
 ### Hint
 ```
@@ -108,6 +120,9 @@ return(
     )
 
 ```
+=======
+   4. Skriv følgende i `keyExtractor={item => item}`
+>>>>>>> 2a51138660e67129ad8749893a5b10cbbd1ef63a
 5. Opret nu en funktion kaldt CarItem som har i parametrene () ``{item,msg}``
    1. I funktionen laves en et return, som returnere et ``<Text> </Text>`` som har {item} `` i sig
 
