@@ -16,9 +16,6 @@ I finder dem i bunden af denne guide.
 <<<<<<< HEAD
 1. Opret et nyt expo projekt med `` npx create-expo-app <projektNavn>`` i din mappe med opgaver
 =======
-1. Start med at oprette et nyt projekt.
-    - `expo init <--angiv navnet på øvelsen-->` eller `npx create-expo-app <--angiv navnet på øvelsen-->` (den nye måde)
->>>>>>> 2a51138660e67129ad8749893a5b10cbbd1ef63a
 
 ## components
 1. Opret en ny mappe kaldt ``components `` som skal indeholde 3 filer kaldt ArrayListComponent.js, FetchListComponent.js og FlatListComponent.js.
@@ -39,7 +36,7 @@ I finder dem i bunden af denne guide.
 1. Opret et nyt stylesheet, se skabelon 2, og eventuelt ændre baggrundsfarven
 2. importér nu de tre nyoprettet komponenter med hver deres komponentnavn som fx ``<ArrayListComponent/>``
 3. Nu burde du have 3 tekster fra hver af de nyoprettede komponenter
->>>>>>> 2a51138660e67129ad8749893a5b10cbbd1ef63a
+
 
 ### Hint:
 ``` 
@@ -54,7 +51,7 @@ export default function App() {
 ```
 
 
-**OBS**! - Ved standard expo opstilling vil der være `` alignItems: 'center'`` & `` justifyContent 'center'`` i jeres stylesheet container. Disse attributter kan drille jeres lister. Prøv at udkommentere dem hvis ikke i kan se jeres 3 tekster fra jeres komponenter.  
+**OBS**! - Ved standard expo opstilling vil der være `` alignItems: 'center'`` & `` justifyContent 'center'`` i jeres stylesheet container. Disse attributter kan drille jeres lister (især på Android). Prøv at udkommentere dem hvis ikke i kan se jeres 3 tekster fra jeres komponenter.  
 
 ## const.js
 1. Opret en såkaldt const.js i mappens rod, som skal bruges til indeholde alt vores "hardcoded data", som i dette tilfælde kommer til at være vores lande, biler og vores fetch url
