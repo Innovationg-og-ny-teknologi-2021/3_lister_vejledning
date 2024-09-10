@@ -5,13 +5,21 @@ I denne opgave vil du lære at arbejde med arrays, hente data med `fetch`, og br
 ## Slutresultat (sådan ca.)
 https://user-images.githubusercontent.com/48329669/128570069-64627288-c9fa-4313-aa17-d727d279563e.mp4
 
+# Documentationen (kig på dem)
+https://reactnative.dev/docs/textinput <br>
+https://reactnative.dev/docs/flatlist <br>
+https://reactnative.dev/docs/style <br>
+https://reactnative.dev/docs/statusbar <br>
+https://reactnative.dev/docs/flatlist <br>
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map 
+
 ## Del 1 - Opret projekt & mappestruktur
 
 1. Start med at navigere til din ønsket mappe i terminalen og opret så et nyt React Native projekt:
     ```
-    npx create-expo-app --template blank ArrayProject
+    npx create-expo-app --template blank ListProject
     ```
-    *Husk at navigere ind i projektet med `cd ArrayProject`*
+    *Husk at navigere ind i projektet med `cd ListProject`*
 
 2. Opret følgende mapper og filer:
    - En mappe kaldet `data` med en fil `const.js` indeholdende:
